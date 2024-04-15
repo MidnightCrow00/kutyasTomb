@@ -1,6 +1,6 @@
 export function rendez(lista, kulcs, rIrany) {
-    const rlista = lista.sort(function (e1, e2) {
-      return e1[kulcs] < e2[kulcs] ? -1 * rIrany : 1 * rIrany;
+    const rlista = lista.sort(function (k1, k2) {
+      return k1[kulcs] < k2[kulcs] ? -1 * rIrany : 1 * rIrany;
     });
   
     return rlista;
@@ -9,22 +9,9 @@ export function rendez(lista, kulcs, rIrany) {
   }
   export function szures(lista, keresoSzoveg) {
     const szLista = lista.filter(function (kutya) {
-      return kutya.nev.toUpperCase().includes(keresoSzoveg.toUpperCase());
+      if (kutya.nev.toUpperCase().includes(keresoSzoveg.toUpperCase()) ||kutya.kor.toUpperCase().includes(keresoSzoveg.toUpperCase()) ||(kutya.nem ? "NŐSTÉNY" : "HÍM").includes() || kutya.faj.toUpperCase().includes(keresoSzoveg.toUpperCase()) ){
+
+      }
     });
     return szLista;
-  
-    const szkorLista = lista.filter(function (kutya) {
-      return kutya.kor.toUpperCase().includes(keresoSzoveg.toUpperCase());
-    });
-    return szkorLista;
-  
-    const sznemLista = lista.filter(function (kutya) {
-      return kutya.nem.toUpperCase().includes(keresoSzoveg.toUpperCase());
-    });
-    return sznemLista;
-
-    const szfajLista = lista.filter(function (kutya) {
-        return kutya.faj.toUpperCase().includes(keresoSzoveg.toUpperCase());
-      });
-      return szfajLista;
   }

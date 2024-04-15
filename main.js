@@ -19,17 +19,20 @@ szuroElem.on("keyup", function () {
   let szoveg = szuroElem.val();
   init(szures(kutyakLISTA, szoveg));
 });
+
 // szorgalmi: egyébb mezők szerint:
 const szurokorElem = $("#szkor");
 szurokorElem.on("keyup", function () {
   let szoveg = szurokorElem.val();
   init(szures(kutyakLISTA, szoveg));
 });
+
 const szuronemElem = $("#sznem");
 szuronemElem.on("keyup", function () {
   let szoveg = szuronemElem.val();
   init(szures(kutyakLISTA, szoveg));
 });
+
 const szurofajElem = $("#szfaj");
 szurofajElem.on("keyup", function () {
   let szoveg = szurofajElem.val();
@@ -92,10 +95,3 @@ function rendezesEsemeny() {
 }
 
 
- //Keverjük össze, véletlenszerű sorrend 
-function veletlen() {
-  kutyakLISTA.sort(function (e1, e2) {
-     //véletlenszerűen kapjunk negatív, vagy pozitív számot 
-    return Math.random()-0.5;
-  });
-}
