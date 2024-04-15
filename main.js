@@ -30,6 +30,11 @@ szuronemElem.on("keyup", function () {
   let szoveg = szuronemElem.val();
   init(szures(kutyakLISTA, szoveg));
 });
+const szurofajElem = $("#szfaj");
+szurofajElem.on("keyup", function () {
+  let szoveg = szurofajElem.val();
+  init(szures(kutyakLISTA, szoveg));
+});
 }
 
 
