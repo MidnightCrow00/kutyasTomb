@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,36 @@
     <script type="module" src="main.js"></script>
 </head>
 <body>
-    <div class="adatok">
-
+  <div class="container mt-5">
+    <h1>Kutyák adatai</h1>
+    <form id="kutyaForm">
+        <div class="mb-3">
+            <label for="nev" class="form-label">Kutya neve</label>
+            <input type="text" class="form-control" id="nev" required>
+        </div>
+        <div class="mb-3">
+            <label for="kor" class="form-label">Kor</label>
+            <input type="number" class="form-control" id="kor" required>
+        </div>
+          <div class="form-check mb-3 col-sm-1">
+            <label class="form-check-label">Hím</label>
+              <input class="form-check-input" type="radio" name="nem" value="him">
+          </div>
+          <div class="form-check mb-3 col-sm-1">
+              <label class="form-check-label">Nőstény</label>
+              <input class="form-check-input" type="radio" name="nem" value="nosteny">
+          </div>
+        <div class="mb-3">
+            <label for="faj" class="form-label">Faj</label>
+            <input type="text" class="form-control" id="faj" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Kutya hozzáadása</button>
+    </form>
+    <div class="mt-4">
+        <h2>Kutyák táblázata</h2>
+        <div class="adatok"></div>
     </div>
+  </div>
+
 </body>
 </html>

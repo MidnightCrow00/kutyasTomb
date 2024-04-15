@@ -8,7 +8,7 @@ export function tablazatLetrehoz(lista) {
       txt += `<tr>
               <td>${elem.nev}</td>
               <td>${elem.kor}</td>
-              <td>${elem.nem ? "nöstény" : "hím"}</td>
+              <td>${elem.nem ? "nőstény" : "hím"}</td>
               <td>${elem.faj}</td>
           </tr>`;
     });
